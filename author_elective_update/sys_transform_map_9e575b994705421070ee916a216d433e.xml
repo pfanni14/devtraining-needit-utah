@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_map">
+    <sys_transform_map action="DELETE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <create_new_record_on_empty_coalesce_fields>false</create_new_record_on_empty_coalesce_fields>
+        <enforce_mandatory_fields>All Fields</enforce_mandatory_fields>
+        <name>Historic NeedIT Data new</name>
+        <order>100</order>
+        <run_business_rules>false</run_business_rules>
+        <run_script>true</run_script>
+        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	if(!("u_requested_for_email" in source)){
+    var name = source.u_requested_for.toLowerCase();
+    target.u_requested_for_email = name.replace(" ", ".") + "@example.com";
+  }
+
+})(source, target, map, log, action==="update");]]></script>
+        <source_table>x_58872_needit_historic_needit_data</source_table>
+        <sys_class_name>sys_transform_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-19 10:24:50</sys_created_on>
+        <sys_id>9e575b994705421070ee916a216d433e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Historic NeedIT Data new</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_transform_map_9e575b994705421070ee916a216d433e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-19 10:24:50</sys_updated_on>
+        <target_table>x_58872_needit_needit</target_table>
+    </sys_transform_map>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>abcf7bfd1bdef910c8432f8dee4bcbc5</instance_id>
+        <instance_name>dev204913</instance_name>
+        <name>sys_transform_map_9e575b994705421070ee916a216d433e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_map"&gt;&lt;sys_transform_map action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;copy_empty_fields&gt;false&lt;/copy_empty_fields&gt;&lt;create_new_record_on_empty_coalesce_fields&gt;false&lt;/create_new_record_on_empty_coalesce_fields&gt;&lt;enforce_mandatory_fields&gt;All Fields&lt;/enforce_mandatory_fields&gt;&lt;name&gt;Historic NeedIT Data new&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;run_business_rules&gt;false&lt;/run_business_rules&gt;&lt;run_script&gt;true&lt;/run_script&gt;&lt;script&gt;&lt;![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	if(!("u_requested_for_email" in source)){
+    var name = source.u_requested_for.toLowerCase();
+    target.u_requested_for_email = name.replace(" ", ".") + "@example.com";
+  }
+
+})(source, target, map, log, action==="update");]]&gt;&lt;/script&gt;&lt;source_table&gt;x_58872_needit_historic_needit_data&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_map&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-03-19 10:24:50&lt;/sys_created_on&gt;&lt;sys_id&gt;9e575b994705421070ee916a216d433e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Historic NeedIT Data new&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_map_9e575b994705421070ee916a216d433e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-03-19 10:24:50&lt;/sys_updated_on&gt;&lt;target_table&gt;x_58872_needit_needit&lt;/target_table&gt;&lt;/sys_transform_map&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-849624446</payload_hash>
+        <record_name>Historic NeedIT Data new</record_name>
+        <reverted_from/>
+        <source>f2726c114789021070ee916a216d43ff</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-19 10:24:50</sys_created_on>
+        <sys_id>5297d7994705421070ee916a216d43f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e563e0a4d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-19 10:24:50</sys_updated_on>
+        <type>Table Transform Map</type>
+        <update_guid>9697d7991f054210e30c83856a6b12f3</update_guid>
+        <update_guid_history>9697d7991f054210e30c83856a6b12f3:-849624446</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-19 10:54:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_map">sys_transform_map</sys_db_object>
+        <sys_id>158267a181db406c9d7fe60c8e1bf610</sys_id>
+        <sys_metadata>9e575b994705421070ee916a216d433e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Historic NeedIT Data new</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_transform_map_9e575b994705421070ee916a216d433e</sys_update_name>
+        <sys_update_version display_value="sys_transform_map_9e575b994705421070ee916a216d433e">5297d7994705421070ee916a216d43f4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-19 10:54:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
